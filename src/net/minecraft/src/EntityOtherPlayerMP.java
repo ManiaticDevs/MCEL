@@ -1,5 +1,7 @@
 package net.minecraft.src;
 
+import net.lonerboys.toolbox.JsonTool;
+
 public class EntityOtherPlayerMP extends EntityPlayer
 {
 
@@ -12,7 +14,7 @@ public class EntityOtherPlayerMP extends EntityPlayer
         field_9286_aZ = 0.0F;
         if(s != null && s.length() > 0)
         {
-    		skinUrl = UUIDRetriever.GetSkinLinkFromUUID(UUID);
+        	skinUrl = "http://82.0.137.150/index/files/skins/" +JsonTool.GetUUIDFromName(name) + ".png";
     		System.out.println((new StringBuilder()).append("Loading texture ").append(skinUrl).toString());
     		//name = session.inventory;
     		
