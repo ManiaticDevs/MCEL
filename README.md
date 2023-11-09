@@ -1,4 +1,4 @@
-![Best we can do..](https://github.com/ManiaticDevs/MCELDB/blob/main/MCEL.png)
+![Best we can do..](https://github.com/ManiaticDevs/MCELDB/blob/main/MCEL.png?)
 
 # Project Title
 
