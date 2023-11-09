@@ -1,12 +1,13 @@
 ![Best we can do..](https://github.com/ManiaticDevs/MCELDB/blob/main/MCEL.png?)
 
-# Project Title
+# MCEL (Minecraft Education Launcher)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
 ## Description
 
+### WE ARE NOT AFFILIATED WITH MOJANG OR MICROSOFT!!!
 A Minecraft Launcher which allows you to launch Minecraft on school computers and others for educational purposes.
 
 #### For those found the secret.json is the login details, guess what. It's completly gone private and you can never find it. Unless you interogate Oikmo.
