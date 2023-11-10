@@ -197,11 +197,12 @@ public class EntityRenderer
         } else
         {
             f1 /= ((EntityPlayer) (entityplayersp)).maxHurtTime;
-            f1 = MathHelper.sin(f1 * f1 * f1 * f1 * 3.141593F);
-            float f3 = ((EntityPlayer) (entityplayersp)).field_9331_N;
-            GL11.glRotatef(-f3, 0.0F, 1.0F, 0.0F);
+            f1 = MathHelper.sin(f1 * f1 * f1 * f1 * (float)Math.PI);
+            //float f3 = ((EntityPlayer) (entityplayersp)).attackedAtYaw;
+            System.out.println(f);
+           // GL11.glRotatef(-f3, 0.0F, 1.0F, 0.0F);
             GL11.glRotatef(-f1 * 14F, 0.0F, 0.0F, 1.0F);
-            GL11.glRotatef(f3, 0.0F, 1.0F, 0.0F);
+           // GL11.glRotatef(f3, 0.0F, 1.0F, 0.0F);
             return;
         }
     }
@@ -518,7 +519,7 @@ public class EntityRenderer
         int i1 = j - (Mouse.getY() * j) / mc.displayHeight - 1;
         if(mc.theWorld != null)
         {
-            func_4134_c(f);
+            func_4134s_c(f);
             if(!Keyboard.isKeyDown(59))
             {
                 mc.ingameGUI.renderGameOverlay(f, mc.currentScreen != null, k, i1);
@@ -541,7 +542,7 @@ public class EntityRenderer
         }
     }
 
-    public void func_4134_c(float f)
+    public void func_4134s_c(float f)
     {
         func_910_a(f);
         EntityPlayerSP entityplayersp = mc.thePlayer;

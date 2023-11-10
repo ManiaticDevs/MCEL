@@ -104,7 +104,7 @@ public abstract class Minecraft implements Runnable {
 	public FontRenderer fontRenderer;
 	public GuiScreen currentScreen = null;
 	public LoadingScreenRenderer loadingScreen = new LoadingScreenRenderer(this);
-	public EntityRenderer field_9243_r = new EntityRenderer(this);
+	public EntityRenderer entityRenderer = new EntityRenderer(this);
 	private ThreadDownloadResources downloadResourcesThread;
 	private int ticksRan = 0;
 	private int field_6282_S = 0;
@@ -536,7 +536,7 @@ public abstract class Minecraft implements Runnable {
 							this.playerController.func_6467_a(this.timer.renderPartialTicks);
 						}
 
-						this.field_9243_r.func_4136_b(this.timer.renderPartialTicks);
+						this.entityRenderer.func_4136_b(this.timer.renderPartialTicks);
 					}
 
 					if(!Display.isActive()) {
@@ -777,7 +777,7 @@ public abstract class Minecraft implements Runnable {
 					if(var8.stackSize == 0) {
 						this.thePlayer.inventory.mainInventory[this.thePlayer.inventory.currentItem] = null;
 					} else if(var8.stackSize != var9) {
-						this.field_9243_r.itemRenderer.func_9449_b();
+						this.entityRenderer.itemRenderer.func_9449_b();
 					}
 				}
 			}
@@ -785,7 +785,7 @@ public abstract class Minecraft implements Runnable {
 			if(var2 && var1 == 1) {
 				ItemStack var10 = this.thePlayer.inventory.getCurrentItem();
 				if(var10 != null && this.playerController.sendUseItem(this.thePlayer, this.theWorld, var10)) {
-					this.field_9243_r.itemRenderer.func_9450_c();
+					this.entityRenderer.itemRenderer.func_9450_c();
 				}
 			}
 
@@ -889,7 +889,7 @@ public abstract class Minecraft implements Runnable {
 
 	public void runTick() {
 		this.ingameGUI.func_555_a();
-		this.field_9243_r.func_910_a(1.0F);
+		this.entityRenderer.func_910_a(1.0F);
 		if(this.thePlayer != null) {
 			this.thePlayer.func_6420_o();
 		}
@@ -1047,7 +1047,7 @@ public abstract class Minecraft implements Runnable {
 			}
 
 			if(!this.field_6316_m) {
-				this.field_9243_r.func_911_a();
+				this.entityRenderer.func_911_a();
 			}
 
 			if(!this.field_6316_m) {

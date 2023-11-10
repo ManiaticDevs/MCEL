@@ -151,8 +151,8 @@ public class EntityPlayer extends EntityLiving
         inventory.dropAllItems();
         if(entity != null)
         {
-            motionX = -MathHelper.cos(((field_9331_N + rotationYaw) * 3.141593F) / 180F) * 0.1F;
-            motionZ = -MathHelper.sin(((field_9331_N + rotationYaw) * 3.141593F) / 180F) * 0.1F;
+            motionX = -MathHelper.cos(((attackedAtYaw + rotationYaw) * 3.141593F) / 180F) * 0.1F;
+            motionZ = -MathHelper.sin(((attackedAtYaw + rotationYaw) * 3.141593F) / 180F) * 0.1F;
         } else
         {
             motionX = motionZ = 0.0D;

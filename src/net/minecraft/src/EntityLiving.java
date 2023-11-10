@@ -23,7 +23,7 @@ public class EntityLiving extends Entity
         field_9347_E = 0;
         field_9345_F = 0.0F;
         field_9343_G = false;
-        field_9331_N = 0.0F;
+        attackedAtYaw = 0.0F;
         deathTime = 0;
         attackTime = 0;
         field_9327_S = false;
@@ -299,7 +299,7 @@ public class EntityLiving extends Entity
             damageEntity(i);
             hurtTime = maxHurtTime = 10;
         }
-        field_9331_N = 0.0F;
+        attackedAtYaw = 0.0F;
         if(flag)
         {
             worldObj.func_9425_a(this, (byte)2);
@@ -313,11 +313,11 @@ public class EntityLiving extends Entity
                     d = (Math.random() - Math.random()) * 0.01D;
                 }
 
-                field_9331_N = (float)((Math.atan2(d1, d) * 180D) / 3.1415927410125732D) - rotationYaw;
+                attackedAtYaw = (float)((Math.atan2(d1, d) * 180D) / 3.1415927410125732D) - rotationYaw;
                 func_434_a(entity, i, d, d1);
             } else
             {
-                field_9331_N = (int)(Math.random() * 2D) * 180;
+                attackedAtYaw = (int)(Math.random() * 2D) * 180;
             }
         }
         if(health <= 0)
@@ -338,7 +338,7 @@ public class EntityLiving extends Entity
     public void func_9280_g()
     {
         hurtTime = maxHurtTime = 10;
-        field_9331_N = 0.0F;
+        attackedAtYaw = 0.0F;
     }
 
     protected void damageEntity(int i)
@@ -802,7 +802,7 @@ public class EntityLiving extends Entity
             field_704_R = 1.5F;
             heartsLife = heartsHalvesLife;
             hurtTime = maxHurtTime = 10;
-            field_9331_N = 0.0F;
+            attackedAtYaw = 0.0F;
             worldObj.playSoundAtEntity(this, getHurtSound(), getSoundVolume(), (rand.nextFloat() - rand.nextFloat()) * 0.2F + 1.0F);
             canAttackEntity(null, 0);
         } else
@@ -843,7 +843,7 @@ public class EntityLiving extends Entity
     private int field_4121_a;
     public int hurtTime;
     public int maxHurtTime;
-    public float field_9331_N;
+    public float attackedAtYaw;
     public int deathTime;
     public int attackTime;
     public float field_9329_Q;
