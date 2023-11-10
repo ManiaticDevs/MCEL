@@ -158,6 +158,8 @@ public abstract class Minecraft implements Runnable {
 	
 	public static void main(String name)
     {
+		System.setProperty("java.util.Arrays.useLegacyMergeSort", "true");
+
 		currentName = name;
 		func_6269_a(name, "-");
     }
