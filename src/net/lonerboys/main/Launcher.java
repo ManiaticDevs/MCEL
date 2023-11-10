@@ -20,22 +20,21 @@ public class Launcher {
 		
 		frame.setSize(856, 480);
 		
-		JLabel text = new JLabel("balls!");
+		JLabel text = new JLabel("");
 		text.setBounds((856-95)/2,(480-30)-10/2, 0, 0);  
 		JButton button = new JButton("Launch");
 		button.setBounds((856-95)/2,(480-30)/2,95,30);  
 		if(!JsonTool.GetUUIDFromName(user).contentEquals("null :[")) {
-			
+			text.setText("You are allowed to use this!");
 			button.addActionListener(new ActionListener(){  
 				public void actionPerformed(ActionEvent e){  
-					
 					System.out.println(JsonTool.GetUUIDFromName(user));
-					//setNull();
 					frame.setVisible(false);
 					Minecraft.main(user);
 				}  
 			});
 		} else {
+			text.setText("You are not allowed to use this!");
 			button.setEnabled(false);
 		}
 		frame.add(button,BorderLayout.CENTER);

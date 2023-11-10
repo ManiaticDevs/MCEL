@@ -144,6 +144,7 @@ public abstract class Minecraft implements Runnable {
 	public static String version = "";
 
 	public Minecraft(Component var1, Canvas var2, MinecraftApplet var3, int var4, int var5, boolean var6) {
+		
 		this.field_9236_T = var4;
 		this.field_9235_U = var5;
 		this.a = var6;
@@ -1321,7 +1322,7 @@ public abstract class Minecraft implements Runnable {
 			String[] var9 = var2.split(":");
 			var7.func_6258_a(var9[0], Integer.parseInt(var9[1]));
 		}
-
+		var5.setResizable(false);
 		var5.setVisible(true);
 		var5.addWindowListener(new GameWindowListener(var7, var8));
 		var8.start();
