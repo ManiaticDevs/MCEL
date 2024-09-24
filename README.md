@@ -1,3 +1,6 @@
+# DESPITE THE PYTHON DESCRIBED HERE, THERE ARE NO FILES.
+## THIS IS JUST A MODDED ALPHA 1.2.6 CLIENT FOR SCHOOL.
+
 ![Best we can do..](https://github.com/ManiaticDevs/MCELDB/blob/main/MCEL.png?)
 
 # MCEL (Minecraft Education Launcher)
